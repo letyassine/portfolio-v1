@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar/Navbar";
-import { useState } from "react";
+import { cn } from "@/lib/utils";
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yassine Haimouch",
@@ -19,7 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={cn(
+          "antialiased bg-slate-200 dark:bg-background pt-[60px] md:pt-[48px]",
+          dmsans.className
+        )}
+      >
         <Providers>
           <Navbar />
           {children}
