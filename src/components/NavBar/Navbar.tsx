@@ -10,10 +10,10 @@ import ThemeSwitch from "../ThemeSwitch";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   return (
-    <div className="fixed left-0 top-0 z-50 w-full border-b border-white/5 bg-white/95 shadow shadow-gray-300/20 backdrop-blur-md transition dark:bg-background/90 dark:shadow-xl dark:shadow-black/20 print:hidden">
+    <div className="fixed left-0 top-0 z-50 w-full border-b border-white/5 bg-white/50 shadow shadow-gray-300/20 backdrop-blur-md transition dark:bg-background/50 dark:shadow-xl dark:shadow-black/20 print:hidden">
       <header className="flex justify-between items-center max-w-screen-lg mx-auto py-2 px-3">
         <div className="flex items-center gap-3">
-          <Link href="/">
+          <Link href="/" onClick={() => setOpen(false)}>
             <Image
               src="/logo.png"
               height={50}
