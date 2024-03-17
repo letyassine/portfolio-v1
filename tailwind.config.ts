@@ -1,3 +1,4 @@
+import { url } from "inspector";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -10,7 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#080b16",
+        dark: "#020817",
+        light: "#f1f5f9",
         rose1: "#F8B5B9",
         blue1: "#005C8C",
         yellow1: "#FBB317",
@@ -18,6 +20,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

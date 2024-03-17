@@ -8,7 +8,7 @@ import { Providers } from "./providers";
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Yassine Haimouch",
+  title: "Yassine's Blog",
   description: "This is My Personal Portfolio/Blog",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "antialiased bg-slate-200 dark:bg-background pt-[60px] md:pt-[48px]",
+          "antialiased bg-slate-50 dark:bg-dark pt-[60px] md:pt-[48px]",
           dmsans.className
         )}
       >

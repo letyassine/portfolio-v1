@@ -7,7 +7,11 @@ interface MaxWidthWrapperProps {
 }
 
 const MaxWidthWrapper: FC<MaxWidthWrapperProps> = ({ className, children }) => {
-  return <div className={cn("mx-auto w-full max-w-screen-xl px-2.5 md:px-20", className)}>{children}</div>;
+  return (
+    <div className={cn("max-w-screen-lg mx-auto w-full px-2.5", className)}>
+      {children}
+    </div>
+  );
 };
 
 export default MaxWidthWrapper;

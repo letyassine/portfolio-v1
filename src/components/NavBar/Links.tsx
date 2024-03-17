@@ -7,6 +7,43 @@ import Spade from "./icons/Spade";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
+export const getNavigationLinks = (): {
+  label: string | React.JSX.Element;
+  href: string;
+  icon: (pathname: string) => React.JSX.Element;
+}[] => {
+  return [
+    {
+      label: "Projects",
+      icon: (pathname: string) => (
+        <Diamond className={pathname == "/projects" ? "text-rose1" : ""} />
+      ),
+      href: "/projects",
+    },
+    {
+      label: "Articles",
+      icon: (pathname: string) => (
+        <Club className={pathname == "/articles" ? "text-yellow1" : ""} />
+      ),
+      href: "/articles",
+    },
+    {
+      label: "Uses",
+      icon: (pathname: string) => (
+        <Heart className={pathname == "/uses" ? "text-blue1" : ""} />
+      ),
+      href: "/uses",
+    },
+    {
+      label: "Contact",
+      icon: (pathname: string) => (
+        <Spade className={pathname == "/contact" ? "text-red1" : ""} />
+      ),
+      href: "/contact",
+    },
+  ];
+};
+
 interface LinksProps {
   className?: string;
   closeMenu?: Function;
@@ -20,44 +57,20 @@ const Links: FC<LinksProps> = ({ className, closeMenu }) => {
     }
     return;
   };
+  const navLinks = getNavigationLinks();
   return (
     <ul className={cn("flex flex-col md:flex-row gap-2", className)}>
-      <li onClick={closeHandler}>
-        <Link
-          className="text-xl md:text-sm group flex items-center gap-2 py-1 px-1.5 lg:px-2.5"
-          href="/projects"
-        >
-          <Diamond className={pathname == "/projects" ? "text-rose1" : ""} />
-          Projects
-        </Link>
-      </li>
-      <li onClick={closeHandler}>
-        <Link
-          className="text-xl md:text-sm group flex items-center gap-2 py-1 px-1.5 lg:px-2.5"
-          href="/articles"
-        >
-          <Club className={pathname == "/articles" ? "text-yellow1" : ""} />
-          Articles
-        </Link>
-      </li>
-      <li onClick={closeHandler}>
-        <Link
-          className="text-xl md:text-sm group flex items-center gap-2 py-1 px-1.5 lg:px-2.5"
-          href="/uses"
-        >
-          <Heart className={pathname == "/uses" ? "text-blue1" : ""} />
-          Uses
-        </Link>
-      </li>
-      <li onClick={closeHandler}>
-        <Link
-          className="text-xl md:text-sm group flex items-center gap-2 py-1 px-1.5 lg:px-2.5"
-          href="/contact"
-        >
-          <Spade className={pathname == "/contact" ? "text-red1" : ""} />
-          Contact
-        </Link>
-      </li>
+      {navLinks.map(({ href, label, icon }) => (
+        <li key={href} onClick={closeHandler}>
+          <Link
+            className="text-xl md:text-sm group flex items-center gap-2 py-1 px-1.5 lg:px-2.5"
+            href={href}
+          >
+            {icon(pathname)}
+            {label}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };
