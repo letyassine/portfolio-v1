@@ -7,7 +7,7 @@ interface BlurImageProps {
   width: number;
   height: number;
   src: string;
-  alt: string;
+  alt?: string;
   className?: string;
 }
 
@@ -22,7 +22,7 @@ const BlurImage: FC<BlurImageProps> = ({
   return (
     <Image
       src={src}
-      alt={alt}
+      alt={alt || ''}
       width={width}
       height={height}
       className={cn(

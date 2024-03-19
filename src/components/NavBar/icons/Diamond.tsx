@@ -4,19 +4,15 @@ import { cn } from "@/lib/utils";
 const Diamond = ({ className }: { className: string }) => {
   return (
     <svg
-      width={17}
-      height={17}
-      viewBox="0 0 123 123"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={cn(
-        `duration-150 group-hover:text-[#F8B5B9]`,
-        className
-      )}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={cn(`duration-150 group-hover:text-[#F8B5B9] w-5 h-5`, className)}
     >
       <path
-        d="M57.8934 1.46447C59.846 -0.488153 63.0118 -0.488158 64.9645 1.46446L121.393 57.8934C123.346 59.846 123.346 63.0118 121.393 64.9645L64.9645 121.393C63.0118 123.346 59.846 123.346 57.8934 121.393L1.46447 64.9645C-0.488153 63.0118 -0.488158 59.846 1.46446 57.8934L57.8934 1.46447Z"
-        fill="currentColor"
+        fillRule="evenodd"
+        d="M19.5 21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3h-5.379a.75.75 0 0 1-.53-.22L11.47 3.66A2.25 2.25 0 0 0 9.879 3H4.5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h15ZM9 12.75a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5H9Z"
+        clipRule="evenodd"
       />
     </svg>
   );

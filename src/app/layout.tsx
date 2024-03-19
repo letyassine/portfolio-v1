@@ -3,7 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar/Navbar";
 import { cn } from "@/lib/utils";
-import { Providers } from "./providers";
+import { ThemeProvider } from "./providers";
 
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
@@ -25,10 +25,10 @@ export default function RootLayout({
           dmsans.className
         )}
       >
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="system">
           <Navbar />
           {children}
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

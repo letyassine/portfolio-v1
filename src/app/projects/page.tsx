@@ -8,35 +8,9 @@ export const metadata: Metadata = {
   description: "This is a description",
 };
 
-const topics = [
-  "web development",
-  "react js",
-  "tailwind css",
-  "next js",
-  "web development",
-  "react js",
-  "tailwind css",
-  "next js",
-];
-
-const Filter = () => {
-  return (
-    <div className="flex flex-wrap gap-2">
-      {topics.map((topic) => (
-        <span
-          className="text-slate-500 border border-slate-600 hover:bg-slate-600 hover:text-slate-300 rounded-full py-1 px-3 cursor-pointer duration-300 ease-in-out"
-          key={topic}
-        >
-          {topic}
-        </span>
-      ))}
-    </div>
-  );
-};
-
 const Project = () => {
   return (
-    <article className="bg-slate-900 rounded-lg overflow-hidden">
+    <article className="dark:bg-gray-900 border border-gray-100 dark:border-none shadow-lg rounded-lg overflow-hidden">
       <div>
         <BlurImage
           src="/images/www/blog.png"
@@ -47,7 +21,7 @@ const Project = () => {
         />
       </div>
       <div className="px-5 py-6">
-        <h1 className="text-xl font-bold">Project 1</h1>
+        <h1 className="text-xl font-bold sm:text-2xl">Improve the Performance of your React Forms</h1>
         <p className="line-clamp-3 w-full pt-3 text-gray-600 dark:text-gray-400">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
           placeat a animi odit temporibus, velit eveniet corrupti quod
@@ -55,8 +29,8 @@ const Project = () => {
           distinctio nihil?
         </p>
         <div className="flex items-center gap-3 pt-4">
-          <button className="bg-slate-800 py-2 px-4 rounded-md">Demo</button>
-          <button className="bg-slate-800 py-2 px-4 rounded-md">GitHub</button>
+          <button className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300">Demo</button>
+          <button className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300">GitHub</button>
         </div>
       </div>
     </article>
@@ -66,15 +40,7 @@ const Project = () => {
 const Projects = () => {
   return (
     <MaxWidthWrapper className="my-8">
-      <div className="flex justify-between mb-8">
-        <h1 className="text-3xl font-bold">All Projects ✨</h1>
-        <input
-          type="text"
-          placeholder="search"
-          className="bg-slate-700 px-3 rounded-md"
-        />
-      </div>
-      <Filter />
+      <h1 className="text-3xl font-bold">All Projects ✨</h1>
       <div className="grid gap-6 md:grid-cols-2 mt-8">
         <Project />
         <Project />

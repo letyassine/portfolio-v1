@@ -1,6 +1,6 @@
 'use client'
 
-import { FiSun, FiMoon } from "react-icons/fi"
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import Image from "next/image"
@@ -24,11 +24,11 @@ export default function ThemeSwitch() {
   )
 
   if (resolvedTheme === 'dark') {
-    return <FiSun className="cursor-pointer" onClick={() => setTheme('light')} />
+    return <SunIcon height={18} width={18} className="cursor-pointer" onClick={() => setTheme('light')} />
   }
 
   if (resolvedTheme === 'light') {
-    return <FiMoon className="cursor-pointer" onClick={() => setTheme('dark')} />
+    return <MoonIcon height={18} width={18} className="cursor-pointer" onClick={() => setTheme('dark')} />
   }
 
 }
