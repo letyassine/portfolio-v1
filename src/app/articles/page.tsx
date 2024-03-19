@@ -41,8 +41,8 @@ const Blog = () => {
     compareDesc(new Date(a.date), new Date(b.date))
   );
   return (
-    <MaxWidthWrapper className="my-8">
-      <h1 className="text-3xl font-bold">All Articles 🌿</h1>
+    <MaxWidthWrapper className="mt-8 mb-64">
+      <h1 className="text-3xl font-bold">All Articles 📝</h1>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mt-8">
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />

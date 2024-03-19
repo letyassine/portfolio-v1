@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/NavBar/Navbar";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "./providers";
+import Footer from "@/components/Footer";
 
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system">
           <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

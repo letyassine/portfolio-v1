@@ -20,7 +20,7 @@ const page = ({ params }: { params: { slug: string } }) => {
   if (!post) notFound();
 
   return (
-    <MaxWidthWrapper className="max-w-3xl my-8 md:mt-16">
+    <MaxWidthWrapper className="max-w-3xl mb-64 mt-8 md:mt-16">
       <div className="flex items-center justify-between">
         <Link className="hover:text-slate-400 duration-300" href="/articles">
           ← Back to Articles

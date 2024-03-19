@@ -10,11 +10,9 @@ export const metadata: Metadata = {
 
 export default function Uses() {
   return (
-    <MaxWidthWrapper className="max-w-3xl my-8 md:mt-16" >
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        Here&apos;s my setup
-      </h1>
-      <div className="prose prose-neutral dark:prose-invert">
+    <MaxWidthWrapper className="mt-8 mb-64">
+      <h1 className="text-3xl font-bold">All Uses 💻</h1>
+      <div className="max-w-3xl mx-auto prose prose-neutral dark:prose-invert mt-8">
         <h3 id="computer-office">Computer / Office</h3>
         <ul>
           <li>16&quot; Macbook Pro (2020)</li>

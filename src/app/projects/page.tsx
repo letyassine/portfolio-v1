@@ -39,8 +39,8 @@ const Project = () => {
 
 const Projects = () => {
   return (
-    <MaxWidthWrapper className="my-8">
-      <h1 className="text-3xl font-bold">All Projects ✨</h1>
+    <MaxWidthWrapper className="mt-8 mb-64">
+      <h1 className="text-3xl font-bold">All Projects 📂</h1>
       <div className="grid gap-6 md:grid-cols-2 mt-8">
         <Project />
         <Project />

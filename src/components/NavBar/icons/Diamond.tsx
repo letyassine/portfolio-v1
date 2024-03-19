@@ -7,7 +7,7 @@ const Diamond = ({ className }: { className: string }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className={cn(`duration-150 group-hover:text-[#F8B5B9] w-5 h-5`, className)}
+      className={cn(`duration-150 group-hover:text-purple-500 w-5 h-5`, className)}
     >
       <path
         fillRule="evenodd"

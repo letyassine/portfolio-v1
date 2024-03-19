@@ -1,9 +1,11 @@
 import BlurImage from "@/components/BlurImage";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <MaxWidthWrapper className="h-[calc(100vh-48px)] flex items-center">
+    <MaxWidthWrapper className="h-[calc(100vh-48px-40px)] flex items-center">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:max-w-none">
@@ -17,15 +19,26 @@ export default function Home() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi 👋🏻 I’m Yassine <br/>Software engineer mainly focused on React ecosystem.
+            Hi 👋🏻 I’m Yassine <br />
+            Software engineer mainly focused on React ecosystem.
           </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+          <div className="mt-6 text-md space-y-7 text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Welcome to my digital nook. I&apos;m a frontend developer, content
+              creator, and public speaker. And here, I share what I&apos;ve been
+              working on recently and things I learned along the way.
             </p>
+          </div>
+          <div className="flex gap-4 mt-6">
+            <Link href="https://github.com/yassinehaimouch" target="_blank">
+              <GitHubLogoIcon height={25} width={25}/>
+            </Link>
+            <Link href="https://www.linkedin.com/in/yassinehaimouch" target="_blank">
+              <LinkedInLogoIcon height={25} width={25}/>
+            </Link>
+            <Link href="https://www.instagram.com/gitcoder" target="_blank">
+              <InstagramLogoIcon height={25} width={25}/>
+            </Link>
           </div>
         </div>
       </div>

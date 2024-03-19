@@ -16,28 +16,28 @@ export const getNavigationLinks = (): {
     {
       label: "Projects",
       icon: (pathname: string) => (
-        <Diamond className={pathname == "/projects" ? "text-rose1" : ""} />
+        <Diamond className={pathname == "/projects" ? "text-purple-500" : ""} />
       ),
       href: "/projects",
     },
     {
       label: "Articles",
       icon: (pathname: string) => (
-        <Club className={pathname == "/articles" ? "text-yellow1" : ""} />
+        <Club className={pathname == "/articles" ? "text-purple-500" : ""} />
       ),
       href: "/articles",
     },
     {
       label: "Uses",
       icon: (pathname: string) => (
-        <Heart className={pathname == "/uses" ? "text-blue1" : ""} />
+        <Heart className={pathname == "/uses" ? "text-purple-500" : ""} />
       ),
       href: "/uses",
     },
     {
       label: "Contact",
       icon: (pathname: string) => (
-        <Spade className={pathname == "/contact" ? "text-red1" : ""} />
+        <Spade className={pathname == "/contact" ? "text-purple-500" : ""} />
       ),
       href: "/contact",
     },

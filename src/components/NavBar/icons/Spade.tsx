@@ -8,7 +8,7 @@ const Spade = ({ className }: { className: string }) => {
       viewBox="0 0 24 24"
       fill="currentColor"
       className={cn(
-        `duration-150 group-hover:text-[#CC3334] h-5 w-5`,
+        `duration-150 group-hover:text-purple-500 h-5 w-5`,
         className
       )}
     >

@@ -2,6 +2,12 @@ import BlurImage from "@/components/BlurImage";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Metadata } from "next";
 import React from "react";
+import {
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+} from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact - Yassine Haimouch",
@@ -10,17 +16,44 @@ export const metadata: Metadata = {
 
 const Contact = () => {
   return (
-    <MaxWidthWrapper className="h-[80vh] flex flex-col md:flex-row items-center gap-5">
-      <div>
-        <h1 className="text-4xl font-bold">Dont be a Stranger!</h1>
-        <p className="text-xl md:max-w-[80%] mt-8">
-          Shoot me an email if you think were a great fit and would like to work
-          with me and lets have a great time while were at it.
-        </p>
-        <p className="text-xl mt-4">yassinehaimouch@gmail.com</p>
-        <p className="mt-4 underline cursor-pointer">Download My Resume</p>
+    <MaxWidthWrapper className="h-[calc(100vh-48px-40px)] flex items-center">
+      <div className="flex items-center flex-col lg:flex-row gap-10">
+        <BlurImage
+          height={300}
+          width={450}
+          src="/images/www/ccnt.svg"
+          className=" dark:opacity-20"
+        />
+        <div className="lg:order-first lg:row-span-2">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            Don&apos;t be a Stranger!
+          </h1>
+          <div className="mt-6 text-xl space-y-7 text-zinc-600 dark:text-zinc-400">
+            <p>
+              Shoot me an email if you think we&apos;re a great fit and would
+              like to work with me and let&apos;s have a great time while
+              we&apos;re at it.
+            </p>
+            <p>
+              yassinehaimouch@proton.me
+            </p>
+          </div>
+          <div className="flex gap-4 mt-6">
+            <Link href="https://github.com/yassinehaimouch" target="_blank">
+              <GitHubLogoIcon height={25} width={25} />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/yassinehaimouch"
+              target="_blank"
+            >
+              <LinkedInLogoIcon height={25} width={25} />
+            </Link>
+            <Link href="https://www.instagram.com/gitcoder" target="_blank">
+              <InstagramLogoIcon height={25} width={25} />
+            </Link>
+          </div>
+        </div>
       </div>
-      <BlurImage width={765} height={459} className="md:w-[900px] w-[300px]" src="/images/www/cnt.png"/>
     </MaxWidthWrapper>
   );
 };
