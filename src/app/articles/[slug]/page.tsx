@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import BlurImage from "@/components/BlurImage";
 
 interface ArticleProps {
   params: { slug: string };
@@ -35,7 +36,12 @@ const page: FC<ArticleProps> = ({ params }) => {
       </div>
       <h1 className="text-5xl font-bold my-5">{post.title}</h1>
       <div className="mb-10">
-        <Image src="/images/blog.png" height={1080} width={2280} alt="" />
+        <BlurImage
+          src={post.image}
+          height={1080}
+          width={2280}
+          alt={post.title}
+        />
       </div>
       <article
         className="prose prose-quoteless prose-neutral dark:prose-invert text-lg"

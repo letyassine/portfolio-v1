@@ -44,12 +44,14 @@ const Project: FC<ProjectProps> = ({
         <div className="flex items-center gap-3 pt-4">
           <Link
             href={demo}
+            target="_blank"
             className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300"
           >
             Demo
           </Link>
           <Link
             href={github}
+            target="_blank"
             className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300"
           >
             GitHub

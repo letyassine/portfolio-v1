@@ -11,6 +11,9 @@ const dmsans = DM_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Yassine Haimouch",
   description: "This is My Personal Portfolio - Blog",
+  icons: {
+    icon: "/images/icon.png",
+  },
 };
 
 export default function RootLayout({
