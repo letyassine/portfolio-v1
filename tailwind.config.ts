@@ -13,10 +13,6 @@ const config: Config = {
       colors: {
         dark: "#020817",
         light: "#f1f5f9",
-        rose1: "#F8B5B9",
-        blue1: "#005C8C",
-        yellow1: "#FBB317",
-        red1: "#CC3334",
       },
     },
   },
