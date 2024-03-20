@@ -1,6 +1,10 @@
 {
-  "name": "www",
-  "version": "0.1.0",
+  "name": "yassinehaimouch-blog",
+  "version": "1.0.0",
+  "description": "Yassine's Blog",
+  "author": "Yassine Haimouch",
+  "keywords": [],
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
