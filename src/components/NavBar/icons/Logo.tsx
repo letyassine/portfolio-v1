@@ -1,6 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
-const Logo = () => {
+const Logo: FC = () => {
+  const pathname = usePathname();
   return (
     <svg
       width="44"
@@ -8,7 +11,10 @@ const Logo = () => {
       viewBox="0 0 44 44"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
-      className="h-[32px] w-[32px]"
+      className={cn(
+        "h-[32px] w-[32px]",
+        pathname === "/" ? "text-purple-500" : ""
+      )}
     >
       <path
         fill="currentColor"

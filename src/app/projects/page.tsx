@@ -1,53 +1,80 @@
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import React, { FC } from "react";
 import { Metadata } from "next";
-import React from "react";
 import BlurImage from "@/components/BlurImage";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Link from "next/link";
+import { projects } from "@/constants/projects";
 
 export const metadata: Metadata = {
-  title: "Projects - Yassine Haimouch",
-  description: "This is a description",
+  title: "Projects | Yassine Haimouch",
+  description: "Projects created by Yassine Haimouch",
 };
 
-const Project = () => {
+interface ProjectProps {
+  name: string;
+  description: string;
+  demo: string;
+  github: string;
+  img: string;
+}
+
+const Project: FC<ProjectProps> = ({
+  name,
+  description,
+  demo,
+  github,
+  img,
+}) => {
   return (
     <article className="dark:bg-gray-900 border border-gray-100 dark:border-none shadow-lg rounded-lg overflow-hidden">
       <div>
         <BlurImage
-          src="/images/www/blog.png"
+          src={img}
           height={1080}
           width={2280}
           className="w-full h-full"
-          alt=""
+          alt={name}
         />
       </div>
       <div className="px-5 py-6">
-        <h1 className="text-xl font-bold sm:text-2xl">Improve the Performance of your React Forms</h1>
+        <h1 className="text-xl font-bold sm:text-2xl">{name}</h1>
         <p className="line-clamp-3 w-full pt-3 text-gray-600 dark:text-gray-400">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-          placeat a animi odit temporibus, velit eveniet corrupti quod
-          consequuntur est at repellat, qui fugit earum saepe porro quis
-          distinctio nihil?
+          {description}
         </p>
         <div className="flex items-center gap-3 pt-4">
-          <button className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300">Demo</button>
-          <button className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300">GitHub</button>
+          <Link
+            href={demo}
+            className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300"
+          >
+            Demo
+          </Link>
+          <Link
+            href={github}
+            className="bg-slate-800 mt-8 w-fit font-semibold text-white hover:bg-slate-700 rounded-full py-2 px-4 duration-300"
+          >
+            GitHub
+          </Link>
         </div>
       </div>
     </article>
   );
 };
 
-const Projects = () => {
+const Projects: FC = () => {
   return (
     <MaxWidthWrapper className="mt-8 mb-64">
       <h1 className="text-3xl font-bold">All Projects 📂</h1>
       <div className="grid gap-6 md:grid-cols-2 mt-8">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        {projects.map((project) => (
+          <Project
+            name={project.name}
+            description={project.description}
+            demo={project.demo}
+            github={project.github}
+            img={project.img}
+            key={project.id}
+          />
+        ))}
       </div>
     </MaxWidthWrapper>
   );

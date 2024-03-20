@@ -1,7 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
-const Spade = ({ className }: { className: string }) => {
+const ContactIcon: FC = () => {
+  const pathname = usePathname();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +11,7 @@ const Spade = ({ className }: { className: string }) => {
       fill="currentColor"
       className={cn(
         `duration-150 group-hover:text-purple-500 h-5 w-5`,
-        className
+        pathname === "/contact" ? "text-purple-500" : ""
       )}
     >
       <path d="M19.5 22.5a3 3 0 0 0 3-3v-8.174l-6.879 4.022 3.485 1.876a.75.75 0 1 1-.712 1.321l-5.683-3.06a1.5 1.5 0 0 0-1.422 0l-5.683 3.06a.75.75 0 0 1-.712-1.32l3.485-1.877L1.5 11.326V19.5a3 3 0 0 0 3 3h15Z" />
@@ -18,4 +20,4 @@ const Spade = ({ className }: { className: string }) => {
   );
 };
 
-export default Spade;
+export default ContactIcon;

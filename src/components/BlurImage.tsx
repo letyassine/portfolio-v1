@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { FC, useState } from "react";
@@ -22,7 +23,7 @@ const BlurImage: FC<BlurImageProps> = ({
   return (
     <Image
       src={src}
-      alt={alt || ''}
+      alt={alt || ""}
       width={width}
       height={height}
       className={cn(

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
-const Diamond = ({ className }: { className: string }) => {
+const ProjectsIcon: FC = () => {
+  const pathname = usePathname();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className={cn(`duration-150 group-hover:text-purple-500 w-5 h-5`, className)}
+      className={cn(
+        `duration-150 group-hover:text-purple-500 w-5 h-5`,
+        pathname === "/projects" ? "text-purple-500" : ""
+      )}
     >
       <path
         fillRule="evenodd"
@@ -18,4 +23,4 @@ const Diamond = ({ className }: { className: string }) => {
   );
 };
 
-export default Diamond;
+export default ProjectsIcon;

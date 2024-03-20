@@ -1,80 +1,50 @@
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import React, { FC } from "react";
 import { Metadata } from "next";
-import React from "react";
-import BlurImage from "@/components/BlurImage";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 export const metadata: Metadata = {
-  title: "Uses - Yassine Haimouch",
-  description: "this is a description",
+  title: "Uses | Yassine Haimouch",
+  description: "Frontend developer, Content creator, and Public speaker",
 };
 
-export default function Uses() {
+const Uses: FC = () => {
   return (
     <MaxWidthWrapper className="mt-8 mb-64">
       <h1 className="text-3xl font-bold">All Uses 💻</h1>
       <div className="max-w-3xl mx-auto prose prose-neutral dark:prose-invert mt-8">
-        <h3 id="computer-office">Computer / Office</h3>
+        <h3>Computer / Office</h3>
         <ul>
-          <li>16&quot; Macbook Pro (2020)</li>
-          <li>31.5&quot; LG UltraFine 32UN880</li>
-          <li>Logitech MX Master 3 Mouse</li>
-          <li>Apple Magic Keyboard</li>
-          <li>Focal XS 2.1 w/ Subwoofer</li>
-          <li>Autonomous SmartDesk 2</li>
-          <li>Autonomous ErgoChair 2</li>
+          <li>15&quot; Macbook (2023)</li>
+          <li>keyboard SK61 Black</li>
+          <li>Sony CH-720N</li>
         </ul>
-        <h3 id="coding">Coding</h3>
+        <h3>Coding</h3>
         <ul>
           <li>
             Editor: VSCode (
-            <a href="https://gist.github.com/leerob/e7883ab35d900b8cbb684ac77e7c4703">
+            <a href="https://github.com/yassinehaimouch/my-vscode-settings">
               Settings / Extensions
             </a>
             )
           </li>
-          <li>Theme: One Dark Pro</li>
-          <li>Terminal: Hyper / zsh</li>
+          <li>Theme: Night Owl (dark)</li>
+          <li>Terminal: zsh</li>
         </ul>
-        <h3 id="audio-video">Audio / Video</h3>
+        <h3>Software</h3>
         <ul>
-          <li>Sony A7III (28-50mm, 35mm f1.8)</li>
-          <li>Shure SM7B + Elgato Wave XLR + Boom</li>
-          <li>Elgato Camlink</li>
-          <li>Logitech C920</li>
-          <li>Elgato Key Light (x2)</li>
-          <li>Elgato Master Mount</li>
-          <li>Aputure Mark 2 120D II</li>
-          <li>Aputure Light Dome II</li>
-        </ul>
-        <h3 id="software">Software</h3>
-        <ul>
-          <li>1Password</li>
+          <li>Brave Browser</li>
+          <li>Figma</li>
           <li>Spotify</li>
-          <li>CleanShot X</li>
-          <li>RetroClip</li>
-          <li>Grammarly</li>
-          <li>Texts</li>
-          <li>Raycast</li>
-          <li>Screenflow</li>
         </ul>
-        <h3 id="music">Music</h3>
-        <ul>
-          <li>Yamaha P-105 Piano</li>
-          <li>Roland TD-20 V-Drums</li>
-          <li>Roland AC-60</li>
-          <li>Shure SM58</li>
-          <li>Martin Acoustic Guitar (X-Series)</li>
-        </ul>
-        <h3 id="other-tech">Other Tech</h3>
+        <h3>Other Tech</h3>
         <ul>
           <li>Apple Airpods Pro</li>
           <li>Apple Watch</li>
           <li>Apple iPhone</li>
-          <li>Lacie USB-C External HDD</li>
-          <li>Kindle</li>
-          <li>Tesla Model 3</li>
         </ul>
       </div>
     </MaxWidthWrapper>
   );
-}
+};
+
+export default Uses;

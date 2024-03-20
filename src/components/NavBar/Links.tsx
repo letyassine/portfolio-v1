@@ -1,44 +1,35 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import Club from "./icons/Club";
-import Diamond from "./icons/Diamond";
-import Heart from "./icons/Heart";
-import Spade from "./icons/Spade";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Uses from "./icons/UsesIcon";
+import ArticlesIcon from "./icons/ArticlesIcon";
+import ContactIcon from "./icons/ContactIcon";
+import ProjectsIcon from "./icons/ProjectsIcon";
 
 export const getNavigationLinks = (): {
   label: string | React.JSX.Element;
   href: string;
-  icon: (pathname: string) => React.JSX.Element;
+  icon: () => React.JSX.Element;
 }[] => {
   return [
     {
       label: "Projects",
-      icon: (pathname: string) => (
-        <Diamond className={pathname == "/projects" ? "text-purple-500" : ""} />
-      ),
+      icon: () => <ProjectsIcon />,
       href: "/projects",
     },
     {
       label: "Articles",
-      icon: (pathname: string) => (
-        <Club className={pathname == "/articles" ? "text-purple-500" : ""} />
-      ),
+      icon: () => <ArticlesIcon />,
       href: "/articles",
     },
     {
       label: "Uses",
-      icon: (pathname: string) => (
-        <Heart className={pathname == "/uses" ? "text-purple-500" : ""} />
-      ),
+      icon: () => <Uses />,
       href: "/uses",
     },
     {
       label: "Contact",
-      icon: (pathname: string) => (
-        <Spade className={pathname == "/contact" ? "text-purple-500" : ""} />
-      ),
+      icon: () => <ContactIcon />,
       href: "/contact",
     },
   ];
@@ -50,7 +41,6 @@ interface LinksProps {
 }
 
 const Links: FC<LinksProps> = ({ className, closeMenu }) => {
-  const pathname = usePathname();
   const closeHandler = () => {
     if (closeMenu) {
       closeMenu();
@@ -66,7 +56,7 @@ const Links: FC<LinksProps> = ({ className, closeMenu }) => {
             className="text-xl md:text-sm group flex items-center gap-2 py-1 px-1.5 lg:px-2.5"
             href={href}
           >
-            {icon(pathname)}
+            {icon()}
             {label}
           </Link>
         </li>

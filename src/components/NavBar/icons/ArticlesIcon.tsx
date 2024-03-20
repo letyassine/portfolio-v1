@@ -1,13 +1,18 @@
-import React from "react";
+import React, { FC } from "react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
-const Club = ({ className }: { className: string }) => {
+const ArticlesIcon: FC = () => {
+  const pathname = usePathname();
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className={cn(`duration-150 group-hover:text-purple-500 w-5 h-5`, className)}
+      className={cn(
+        `duration-150 group-hover:text-purple-500 w-5 h-5`,
+        pathname === "/articles" ? "text-purple-500" : ""
+      )}
     >
       <path
         fill="currentColor"
@@ -19,4 +24,4 @@ const Club = ({ className }: { className: string }) => {
   );
 };
 
-export default Club;
+export default ArticlesIcon;

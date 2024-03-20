@@ -1,7 +1,7 @@
+import React, { FC } from "react";
+import { Metadata } from "next";
 import BlurImage from "@/components/BlurImage";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { Metadata } from "next";
-import React from "react";
 import {
   GitHubLogoIcon,
   InstagramLogoIcon,
@@ -10,18 +10,18 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact - Yassine Haimouch",
-  description: "This is a description",
+  title: "Contact | Yassine Haimouch",
+  description: "Frontend developer, Content creator, and Public speaker",
 };
 
-const Contact = () => {
+const Contact: FC = () => {
   return (
-    <MaxWidthWrapper className="h-[calc(100vh-48px-40px)] flex items-center">
+    <MaxWidthWrapper className="md:h-[calc(100vh-48px-40px)] mt-20 md:mt-0 flex items-center">
       <div className="flex items-center flex-col lg:flex-row gap-10">
         <BlurImage
           height={300}
           width={450}
-          src="/images/www/ccnt.svg"
+          src="/images/contact.svg"
           className=" dark:opacity-20"
         />
         <div className="lg:order-first lg:row-span-2">
@@ -34,9 +34,7 @@ const Contact = () => {
               like to work with me and let&apos;s have a great time while
               we&apos;re at it.
             </p>
-            <p>
-              yassinehaimouch@proton.me
-            </p>
+            <p>yassinehaimouch@proton.me</p>
           </div>
           <div className="flex gap-4 mt-6">
             <Link href="https://github.com/yassinehaimouch" target="_blank">
