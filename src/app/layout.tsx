@@ -10,7 +10,7 @@ import ogImage from "./opengraph-image.jpg";
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dsmtech.io'),
+  metadataBase: new URL('https://gitcoder.vercel.app/opengraph-image.jpg'),
   title: "Yassine Haimouch",
   description: "Developer, writer, and creator.",
   openGraph: {
