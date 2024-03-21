@@ -17,11 +17,6 @@ export const generateMetadata = ({ params }: ArticleProps) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
 
-  const ogParams = new URLSearchParams();
-  ogParams.set("heading", post.title);
-  ogParams.set("type", "Blog Post");
-  ogParams.set("mode", "dark");
-
   return {
     title: post.title,
     openGraph: {
@@ -30,7 +25,7 @@ export const generateMetadata = ({ params }: ArticleProps) => {
       url: `/articles/${params.slug}`,
       images: [
         {
-          url: `/og?title=${ogParams.toString()}`,
+          url: `/og?title=${post.title.toString()}`,
           width: 1920,
           height: 1080,
           alt: post.title,
@@ -41,7 +36,7 @@ export const generateMetadata = ({ params }: ArticleProps) => {
       card: "summary_large_image",
       title: post.title,
       images: [`/og?${ogParams.toString()}`],
-    }
+    },
   };
 };
 
