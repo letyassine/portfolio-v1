@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "./providers";
 import Navbar from "@/components/NavBar/Navbar";
-import ogImage from '/opengraph-image.jpg'
+import ogImage from "./opengraph-image.jpg";
 
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
