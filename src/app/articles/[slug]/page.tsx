@@ -35,7 +35,7 @@ export const generateMetadata = ({ params }: ArticleProps) => {
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      images: [`/og?${ogParams.toString()}`],
+      images: [`/og?${post.title.toString()}`],
     },
   };
 };
