@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    title: 'Yassine Haimouch',
+    card: 'summary_large_image',
+  },
   icons: {
     icon: "/images/icon.png",
   },
