@@ -2,7 +2,6 @@
 title: Dai Vernon
 date: 2024-03-20
 image: "/images/posts/daivernon.jpeg"
-summary: 'Testting Testing'
 ---
 
 Magic, as an art form, has its luminaries, those whose names resonate through the ages, leaving an indelible mark on the world of illusion. Among these titans stands Dai Vernon, a master conjurer whose innovations and contributions have shaped modern magic in profound ways.
