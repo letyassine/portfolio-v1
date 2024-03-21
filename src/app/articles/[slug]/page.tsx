@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
@@ -17,7 +16,33 @@ export const generateStaticParams = async () =>
 export const generateMetadata = ({ params }: ArticleProps) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
-  return { title: post.title };
+
+  const ogParams = new URLSearchParams();
+  ogParams.set("heading", post.title);
+  ogParams.set("type", "Blog Post");
+  ogParams.set("mode", "dark");
+
+  return {
+    title: post.title,
+    openGraph: {
+      title: post.title,
+      type: "article",
+      url: `/articles/${params.slug}`,
+      images: [
+        {
+          url: `/og?${ogParams.toString()}`,
+          width: 1920,
+          height: 1080,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      images: [`/og?${ogParams.toString()}`],
+    }
+  };
 };
 
 const page: FC<ArticleProps> = ({ params }) => {
