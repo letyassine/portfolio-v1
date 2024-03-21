@@ -10,14 +10,14 @@ const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yassine Haimouch",
-  description: "This is My Personal Portfolio - Blog",
+  description: 'Developer, writer, and creator.',
   openGraph: {
-    title: 'Yassine Haimouch',
-    description: 'Developer, writer, and creator.',
-    url: 'https://gitcoder.vercel.app',
-    siteName: 'Yassine Haimouch',
-    locale: 'en_US',
-    type: 'website',
+    title: "Yassine Haimouch",
+    description: "Developer, writer, and creator.",
+    url: "https://gitcoder.vercel.app",
+    siteName: "Yassine Haimouch",
+    locale: "en_US",
+    type: "website",
   },
   icons: {
     icon: "/images/icon.png",
