@@ -2,6 +2,7 @@
 title: Unveiling the Architecture Behind My Blog
 date: 2024-03-20
 image: "/images/posts/blog.png"
+summary: "In the vast universe of web development, embarking on the journey of creating your own blog can be both exhilarating and daunting. As I ventured into this endeavor"
 ---
 
 ## Introduction

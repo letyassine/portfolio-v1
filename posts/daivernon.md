@@ -2,6 +2,7 @@
 title: Dai Vernon
 date: 2024-03-20
 image: "/images/posts/daivernon.jpeg"
+summary: "Magic, as an art form, has its luminaries, those whose names resonate through the ages, leaving an indelible mark on the world of illusion"
 ---
 
 Magic, as an art form, has its luminaries, those whose names resonate through the ages, leaving an indelible mark on the world of illusion. Among these titans stands Dai Vernon, a master conjurer whose innovations and contributions have shaped modern magic in profound ways.
@@ -27,4 +28,3 @@ Vernon's impact on magic is perhaps best encapsulated by his famous quote: "In m
 Though Dai Vernon may have passed from this world, his legacy lives on in the hearts and minds of magicians everywhere. His contributions to the art of magic continue to inspire and influence countless performers, reminding us that true magic lies not in the hands, but in the imagination and spirit of those who dare to dream.
 
 In the pantheon of magical greats, Dai Vernon stands as a beacon of innovation and inspiration, a testament to the enduring power of the human spirit to create wonder and enchantment in the world. As we continue to marvel at the mysteries of magic, let us never forget the indelible mark left by "The Professor" himself.
-

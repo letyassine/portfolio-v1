@@ -17,11 +17,12 @@ export const generateMetadata = ({ params }: ArticleProps) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
 
-  let { title, date: publishedTime } = post;
+  let { title, date: publishedTime, summary: description } = post;
   let ogImage = `https://gitcoder.vercel.app/og?title=${title}`;
 
   return {
     title,
+    description,
     openGraph: {
       title,
       type: "article",
@@ -36,6 +37,7 @@ export const generateMetadata = ({ params }: ArticleProps) => {
     twitter: {
       card: "summary_large_image",
       title,
+      description,
       images: [ogImage],
     },
   };
