@@ -2,6 +2,7 @@
 title: The Art of Cardistry Elevating Playing Cards to a Visual Symphony
 date: 2024-03-20
 image: "/images/posts/cardistry.jpeg"
+summary: 'Testting Testing'
 ---
 
 ## Introduction

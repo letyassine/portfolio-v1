@@ -17,25 +17,29 @@ export const generateMetadata = ({ params }: ArticleProps) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
 
+  let { title, date: publishedTime, summary: description } = post;
+  let ogImage = `https://gitcoder.vercel.app/og?title=${title}`;
+
   return {
-    title: post.title,
+    title,
+    description,
     openGraph: {
-      title: post.title,
+      title,
+      description,
       type: "article",
-      url: `/articles/${params.slug}`,
+      publishedTime,
+      url: `https://gitcoder.vercel.app/blog/${post._raw.flattenedPath}`,
       images: [
         {
-          url: `/og?title=${post.title.toString()}`,
-          width: 1920,
-          height: 1080,
-          alt: post.title,
+          url: ogImage,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      images: [`/og?${post.title.toString()}`],
+      title,
+      description,
+      images: [ogImage],
     },
   };
 };
