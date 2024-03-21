@@ -5,12 +5,13 @@ import Footer from "@/components/Footer";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "./providers";
 import Navbar from "@/components/NavBar/Navbar";
+import ogImage from '/opengraph-image.jpg'
 
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yassine Haimouch",
-  description: 'Developer, writer, and creator.',
+  description: "Developer, writer, and creator.",
   openGraph: {
     title: "Yassine Haimouch",
     description: "Developer, writer, and creator.",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
     siteName: "Yassine Haimouch",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+      },
+    ],
   },
   icons: {
     icon: "/images/icon.png",
