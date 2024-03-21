@@ -30,7 +30,7 @@ export const generateMetadata = ({ params }: ArticleProps) => {
       url: `/articles/${params.slug}`,
       images: [
         {
-          url: `/og?${ogParams.toString()}`,
+          url: `/og?title=${ogParams.toString()}`,
           width: 1920,
           height: 1080,
           alt: post.title,
