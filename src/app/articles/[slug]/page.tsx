@@ -59,14 +59,16 @@ const page: FC<ArticleProps> = ({ params }) => {
         </time>
       </div>
       <h1 className="text-5xl font-bold my-5">{post.title}</h1>
-      <div className="mb-10">
-        <BlurImage
-          src={post.image}
-          height={1080}
-          width={2280}
-          alt={post.title}
-        />
-      </div>
+      {post.image && (
+        <div className="mb-10">
+          <BlurImage
+            src={post.image}
+            height={1080}
+            width={2280}
+            alt={post.title}
+          />
+        </div>
+      )}
       <article
         className="prose prose-quoteless prose-neutral dark:prose-invert text-lg"
         dangerouslySetInnerHTML={{ __html: post.body.html }}
