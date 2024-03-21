@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          backgroundImage: 'url(https://gitcoder.vercel.com/og-bg.jpg)',
+          backgroundImage: 'url(https://gitcoder.vercel.app/og-bg.jpg)',
         }}
       >
         <div
