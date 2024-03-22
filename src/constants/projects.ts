@@ -4,7 +4,7 @@ export const projects = [
     name: "Animated Tabs",
     description:
       "An animated tab component built with Framer Motion's layoutId prop.",
-    demo: "https://github.com/yassinehaimouch/animated-tabs",
+    demo: "https://animated-tabs-pi.vercel.app/",
     github: "https://github.com/yassinehaimouch/animated-tabs",
     img: "/images/projects/project-1.jpg",
   },
