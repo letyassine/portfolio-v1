@@ -5,11 +5,12 @@ import Footer from "@/components/Footer";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "./providers";
 import Navbar from "@/components/NavBar/Navbar";
+import PlausibleProvider from "next-plausible";
 
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gitcoder.vercel.app/'),
+  metadataBase: new URL("https://gitcoder.vercel.app/"),
   title: "Yassine Haimouch",
   description: "Developer, writer, and creator.",
   openGraph: {
@@ -21,8 +22,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    title: 'Yassine Haimouch',
-    card: 'summary_large_image',
+    title: "Yassine Haimouch",
+    card: "summary_large_image",
   },
   icons: {
     icon: "/images/icon.png",
@@ -36,6 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <PlausibleProvider domain="gitcoder.vercel.app" />
+      </head>
       <body
         className={cn(
           "antialiased bg-slate-50 dark:bg-dark pt-[60px] md:pt-[48px]",
