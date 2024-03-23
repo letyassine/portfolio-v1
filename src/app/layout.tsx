@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <PlausibleProvider domain="gitcoder.vercel.app" />
+        <PlausibleProvider domain="gitcoder.vercel.app" taggedEvents={true}/>
       </head>
       <body
         className={cn(
