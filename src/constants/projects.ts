@@ -7,6 +7,7 @@ export const projects = [
     demo: "https://animated-tabs-pi.vercel.app/",
     github: "https://github.com/yassinehaimouch/animated-tabs",
     img: "/images/projects/project-1.jpg",
+    projectTags: ["framermotion", "tailwindcss"]
   },
   {
     id: "project-2",
@@ -16,6 +17,7 @@ export const projects = [
     demo: "https://gitcoder.vercel.app/",
     github: "https://github.com/yassinehaimouch/blog-portfolio",
     img: "/images/projects/project-3.jpg",
+    projectTags: ["nextjs", "tailwindcss"]
   },
   {
     id: "project-3",
@@ -25,5 +27,6 @@ export const projects = [
     demo: "https://github.com/yassinehaimouch/CameraShop",
     github: "https://github.com/yassinehaimouch/CameraShop",
     img: "/images/projects/project-2.jpg",
+    projectTags: ["reactjs", "redux"]
   },
 ];
