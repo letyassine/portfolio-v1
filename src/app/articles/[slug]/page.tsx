@@ -5,7 +5,6 @@ import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import BlurImage from "@/components/BlurImage";
-import { type Metadata } from "next";
 
 interface ArticleProps {
   params: { slug: string };
@@ -14,80 +13,40 @@ interface ArticleProps {
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
-// export const generateMetadata: Promise<Metadata> = ({ params }: ArticleProps) => {
-//   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-//   if (!post) notFound();
-
-//   let { title, date: publishedTime, summary: description } = post;
-//   let ogImage = `https://gitcoder.vercel.app/og?title=${title}`;
-
-//   return {
-//     title,
-//     description,
-//     alternates: {
-//       canonical: `/blog/${post._raw.flattenedPath}`,
-//     },
-//     openGraph: {
-//       title,
-//       description,
-//       type: "article",
-//       publishedTime,
-//       url: `/blog/${post._raw.flattenedPath}`,
-//       images: [
-//         {
-//           url: ogImage,
-//           alt: post.title,
-//         },
-//       ],
-//     },
-//     twitter: {
-//       card: "summary_large_image",
-//       title,
-//       description,
-//       images: [ogImage],
-//     },
-//   };
-// };
-
-export async function generateMetadata({
-  params,
-}: ArticleProps): Promise<Metadata> {
+export const generateMetadata = ({ params }: ArticleProps) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post) notFound();
 
-  const ogParams = new URLSearchParams();
-  ogParams.set("heading", post.title);
-  ogParams.set("type", "Blog Post");
-  ogParams.set("mode", "dark");
+  let { title, date: publishedTime, summary: description } = post;
+  let ogImage = `/og?title=${title}`;
 
   return {
-    title: post.title,
-    description: post.summary,
+    title,
+    description,
     alternates: {
       canonical: `/articles/${post._raw.flattenedPath}`,
     },
     openGraph: {
-      title: post.title,
-      description: post.summary,
+      title,
+      description,
       type: "article",
+      publishedTime,
       url: `/articles/${post._raw.flattenedPath}`,
       images: [
         {
-          url: `/og?${ogParams.toString()}`,
-          width: 1200,
-          height: 630,
+          url: ogImage,
           alt: post.title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.summary,
-      images: [`/og?${ogParams.toString()}`],
+      title,
+      description,
+      images: [ogImage],
     },
   };
-}
+};
 
 const page: FC<ArticleProps> = ({ params }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
