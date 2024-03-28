@@ -25,6 +25,7 @@ export const generateMetadata = ({ params }: ArticleProps) => {
     description,
     openGraph: {
       title,
+      description,
       type: "article",
       publishedTime,
       url: `https://gitcoder.vercel.app/blog/${post._raw.flattenedPath}`,
