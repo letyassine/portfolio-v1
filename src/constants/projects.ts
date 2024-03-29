@@ -24,7 +24,7 @@ export const projects = [
     name: "Shop To Increase Decrease Products",
     description:
       "You can ADD Product To Cart, increase decrease Products, Get Total Cost, Remove Product and Clear Shopping Cart.",
-    demo: "https://github.com/yassinehaimouch/CameraShop",
+    demo: "https://camera-shop-beige.vercel.app/",
     github: "https://github.com/yassinehaimouch/CameraShop",
     img: "/images/projects/project-2.jpg",
     projectTags: ["reactjs", "redux"]
