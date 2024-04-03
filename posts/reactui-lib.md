@@ -1,7 +1,6 @@
 ---
 title: The Best React UI Libraries for Your Projects
 date: 2024-04-03
-image: "https://gitcoder.vercel.app/og?title=the%20Best%20React%20UI%20Libraries for%20Your%20Projects"
 summary: "React developers have a wide array of UI libraries to choose from, each offering unique features and benefits. This article explores five top React UI libraries"
 ---
 
