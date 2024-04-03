@@ -5,6 +5,7 @@ import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import BlurImage from "@/components/BlurImage";
+import { TracingBeam } from "@/components/tracing-beam";
 
 interface ArticleProps {
   params: { slug: string };
@@ -53,31 +54,33 @@ const page: FC<ArticleProps> = ({ params }) => {
   if (!post) notFound();
 
   return (
-    <MaxWidthWrapper className="max-w-3xl mb-64 mt-8 md:mt-16">
-      <div className="flex items-center justify-between">
-        <Link className="hover:text-slate-400 duration-300" href="/articles">
-          ← Back to Articles
-        </Link>
-        <time dateTime={post.date} className="mb-1 text-gray-600">
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-      </div>
-      <h1 className="text-5xl font-bold my-5">{post.title}</h1>
-      {post.image && (
-        <div className="mb-10">
-          <BlurImage
-            src={post.image}
-            height={1080}
-            width={2280}
-            alt={post.title}
-          />
+    <TracingBeam>
+      <MaxWidthWrapper className="max-w-3xl mb-64 mt-8 md:mt-16">
+        <div className="flex items-center justify-between">
+          <Link className="hover:text-slate-400 duration-300" href="/articles">
+            ← Back to Articles
+          </Link>
+          <time dateTime={post.date} className="mb-1 text-gray-600">
+            {format(parseISO(post.date), "LLLL d, yyyy")}
+          </time>
         </div>
-      )}
-      <article
-        className="prose prose-quoteless prose-neutral dark:prose-invert text-lg"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
-    </MaxWidthWrapper>
+        <h1 className="text-5xl font-bold my-5">{post.title}</h1>
+        {post.image && (
+          <div className="mb-10">
+            <BlurImage
+              src={post.image}
+              height={1080}
+              width={2280}
+              alt={post.title}
+            />
+          </div>
+        )}
+        <article
+          className="prose prose-quoteless prose-neutral dark:prose-invert text-lg"
+          dangerouslySetInnerHTML={{ __html: post.body.html }}
+        />
+      </MaxWidthWrapper>
+    </TracingBeam>
   );
 };
 
