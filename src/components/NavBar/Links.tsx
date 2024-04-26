@@ -20,7 +20,7 @@ export const getNavigationLinks = (): {
     {
       label: "Articles",
       icon: () => <ArticlesIcon />,
-      href: "/articles",
+      href: "/articles/:path*",
     },
     {
       label: "Uses",
