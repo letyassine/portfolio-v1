@@ -11,7 +11,7 @@ const ArticlesIcon: FC = () => {
       fill="currentColor"
       className={cn(
         `duration-150 group-hover:text-purple-500 w-5 h-5`,
-        pathname === "/articles" ? "text-purple-500" : ""
+        pathname === "/articles/:path*" ? "text-purple-500" : ""
       )}
     >
       <path
