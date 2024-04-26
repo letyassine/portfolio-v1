@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 
 const ArticlesIcon: FC = () => {
   const pathname = usePathname();
+  const isArticlesPage = /^\/articles(\/.*)?$/.test(pathname);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +12,7 @@ const ArticlesIcon: FC = () => {
       fill="currentColor"
       className={cn(
         `duration-150 group-hover:text-purple-500 w-5 h-5`,
-        pathname === "/articles/:path*" ? "text-purple-500" : ""
+        isArticlesPage ? "text-purple-500" : ""
       )}
     >
       <path
