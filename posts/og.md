@@ -11,11 +11,11 @@ An Open Graph image or OG image is the image that is displayed on social media a
 
 ## Steps
 
-### Step 1: Add image inside public folder that has empty space ```og-bg.jpg```
+#### Step 1: Add image inside public folder that has empty space `og-bg.jpg`
 
-<img src="https://gitcoder.vercel.app/og" alt="background-image">
+![background-image](https://gitcoder.vercel.app/og)
 
-### Step 2: Create new folder inside app directory and name it OG then create ```route.tsx``` (jsx) file
+#### Step 2: Create new folder inside app directory and name it OG then create `route.tsx` (jsx) file
 
 ```tsx
 import { ImageResponse } from 'next/og';
@@ -65,11 +65,11 @@ export async function GET(req: NextRequest) {
 }
 ```
 
-## The Result ```http://localhost:3000/og?title=Hello World```
+## The Result ```http://localhost:3000/og?title=HelloWorld```
 
-<img src="https://gitcoder.vercel.app/og?title=Hello World" alt="background-image">
+![background-image](https://gitcoder.vercel.app/og?title=HelloWorld)
 
-### Then you can use it in generateMetaData function
+#### Then you can use it in generateMetaData function
 
 ```tsx
 export const generateMetadata = ({ params }: ArticleProps) => {
