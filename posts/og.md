@@ -65,7 +65,7 @@ export async function GET(req: NextRequest) {
 }
 ```
 
-### The Result ``http://localhost:3000/og?title=HelloWorld```
+### The Result `http://localhost:3000/og?title=HelloWorld`
 
 ![background-image](https://gitcoder.vercel.app/og?title=HelloWorld)
 
