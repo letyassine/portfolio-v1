@@ -32,7 +32,9 @@ const Uses: FC = () => {
         </ul>
         <h3>Software</h3>
         <ul>
-          <li>Brave Browser</li>
+          <li>
+            <a href="https://arc.net/gift/b80692b0">Arc Browser</a>
+          </li>
           <li>Figma</li>
           <li>Spotify</li>
         </ul>
