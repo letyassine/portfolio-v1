@@ -8,7 +8,7 @@ import Hamburger from "hamburger-react";
 import React, { useState, FC } from "react";
 import ThemeSwitch from "../ThemeSwitch";
 import MaxWidthWrapper from "../MaxWidthWrapper";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, DiscordLogoIcon } from "@radix-ui/react-icons";
 
 const Navbar: FC = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -24,6 +24,13 @@ const Navbar: FC = () => {
             <Links className="hidden md:flex" />
           </nav>
           <div className="flex items-center gap-2">
+            <Link
+              className="hidden md:block"
+              href="https://discord.gg/5TnK7wuzw6"
+              target="_blank"
+            >
+              <DiscordLogoIcon height={18} width={18} />
+            </Link>
             <Link
               className="hidden md:block"
               href="https://github.com/yassinehaimouch/blog-portfolio"
