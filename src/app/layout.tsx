@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { DM_Sans } from "next/font/google";
 import { ThemeProvider } from "./providers";
 import Navbar from "@/components/NavBar/Navbar";
-import PlausibleProvider from "next-plausible";
+import Script from 'next/script';
 
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
@@ -48,9 +48,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
-        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-        <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
       </body>
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
     </html>
   );
 }
