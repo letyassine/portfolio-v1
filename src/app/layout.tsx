@@ -37,9 +37,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <PlausibleProvider domain="gitcoder.vercel.app" taggedEvents={true}/>
-      </head>
       <body
         className={cn(
           "antialiased bg-slate-50 dark:bg-dark pt-[60px] md:pt-[48px]",
@@ -51,6 +48,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+        <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
       </body>
     </html>
   );
