@@ -4,7 +4,9 @@ import {
   GitHubLogoIcon,
   InstagramLogoIcon,
   LinkedInLogoIcon,
+  TwitterLogoIcon,
 } from "@radix-ui/react-icons";
+import { Twitch, Youtube } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -45,6 +47,12 @@ export default function Home() {
             </Link>
             <Link href="https://www.instagram.com/gitcoder" target="_blank">
               <InstagramLogoIcon height={25} width={25} />
+            </Link>
+            <Link href="https://x.com/thegitcoder" target="_blank">
+              <TwitterLogoIcon height={25} width={25} />
+            </Link>
+            <Link href="https://www.youtube.com/@thegitcoder" target="_blank">
+              <Youtube height={25} width={25} />
             </Link>
           </div>
         </div>
