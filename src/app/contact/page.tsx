@@ -6,8 +6,10 @@ import {
   GitHubLogoIcon,
   InstagramLogoIcon,
   LinkedInLogoIcon,
+  TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { Youtube } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact | Yassine Haimouch",
@@ -48,6 +50,12 @@ const Contact: FC = () => {
             </Link>
             <Link href="https://www.instagram.com/gitcoder" target="_blank">
               <InstagramLogoIcon height={25} width={25} />
+            </Link>
+            <Link href="https://x.com/thegitcoder" target="_blank">
+              <TwitterLogoIcon height={25} width={25} />
+            </Link>
+            <Link href="https://www.youtube.com/@thegitcoder" target="_blank">
+              <Youtube height={25} width={25} />
             </Link>
           </div>
         </div>
