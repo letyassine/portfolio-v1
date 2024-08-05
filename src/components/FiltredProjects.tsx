@@ -95,7 +95,7 @@ const Filter: FC<FilterProps> = ({
               }
             }}
             className={cn(
-              "py-1 px-4 rounded-full border border-purple-400 dark:hover:bg-purple-500 hover:bg-purple-300 duration-300 cursor-pointer",
+              "py-1 px-4 rounded-full border border-purple-400 dark:hover:bg-purple-500 hover:bg-purple-300 duration-300 cursor-pointer select-none",
               tags.includes(el) ? "bg-purple-300 dark:bg-purple-500" : "",
               !disabledTags.includes(el)
                 ? "cursor-not-allowed border-gray-300 text-gray-300 dark:border-gray-700 dark:text-gray-700 dark:hover:bg-opacity-0 hover:bg-opacity-0"
