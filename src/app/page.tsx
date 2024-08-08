@@ -6,7 +6,7 @@ import {
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
-import { Twitch, Youtube } from "lucide-react";
+import { Youtube } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {

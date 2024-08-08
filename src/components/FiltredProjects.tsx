@@ -4,6 +4,7 @@ import { projects } from "@/constants/projects";
 import { cn } from "@/lib/utils";
 import BlurImage from "./BlurImage";
 import Link from "next/link";
+import { tagsItems } from "@/constants/tagsItems";
 
 interface ProjectProps {
   name: string;
@@ -15,7 +16,6 @@ interface ProjectProps {
 }
 
 interface FilterProps {
-  tagsItems: string[];
   tags: string[];
   onSetTags: Function;
   disabledTags: string[];
@@ -74,7 +74,6 @@ const Project: FC<ProjectProps> = ({
 };
 
 const Filter: FC<FilterProps> = ({
-  tagsItems,
   tags,
   onSetTags,
   disabledTags,
@@ -117,13 +116,6 @@ const matchTags = (current: string[], target: string[]) => {
 
 const FiltredProjects: FC = () => {
   const [tags, setTags] = useState<string[]>([]);
-  const tagsItems: string[] = [
-    "reactjs",
-    "nextjs",
-    "tailwindcss",
-    "framermotion",
-    "redux",
-  ];
   let filtredProjects = projects.filter((proj) =>
     matchTags(proj.projectTags, tags)
   );
@@ -134,7 +126,6 @@ const FiltredProjects: FC = () => {
     <div>
       <Filter
         disabledTags={filtredTags}
-        tagsItems={tagsItems}
         tags={tags}
         onSetTags={setTags}
       />

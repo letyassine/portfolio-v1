@@ -7,26 +7,16 @@ export const projects = [
     demo: "https://animated-tabs-pi.vercel.app/",
     github: "https://github.com/yassinehaimouch/animated-tabs",
     img: "/images/projects/project-1.jpg",
-    projectTags: ["framermotion", "tailwindcss"]
+    projectTags: ["framermotion", "tailwindcss"],
   },
   {
     id: "project-2",
-    name: "Blog and Portfolio",
+    name: "Spelling Bee",
     description:
-      "Is where I share what I've been working on recently and things I learned along the way.",
-    demo: "https://gitcoder.vercel.app/",
-    github: "https://github.com/yassinehaimouch/blog-portfolio",
-    img: "/images/projects/project-3.jpg",
-    projectTags: ["nextjs", "tailwindcss"]
-  },
-  {
-    id: "project-3",
-    name: "Shop To Increase Decrease Products",
-    description:
-      "You can ADD Product To Cart, increase decrease Products, Get Total Cost, Remove Product and Clear Shopping Cart.",
-    demo: "https://camera-shop-beige.vercel.app/",
-    github: "https://github.com/yassinehaimouch/CameraShop",
+      "Spelling Bee 🐝 is a word game that challenges players to construct as many words as they can using pre-selected letters.",
+    demo: "https://bee.gitcoder.me",
+    github: "https://github.com/yassinehaimouch/spelling-bee",
     img: "/images/projects/project-2.jpg",
-    projectTags: ["reactjs", "redux"]
+    projectTags: ["reactjs","nextjs", "tailwindcss"],
   },
 ];
