@@ -29,7 +29,7 @@ const config: Config = {
         },
       },
       animation: {
-        "slide-top": "slide-top 0.3s ease-out",
+        "slide-top": "slide-top 0.3s ease-out backwards",
       },
     },
   },
