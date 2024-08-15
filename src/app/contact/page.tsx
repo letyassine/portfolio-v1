@@ -27,10 +27,10 @@ const Contact: FC = () => {
           className=" dark:opacity-20"
         />
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 animate-slide-top">
             Don&apos;t be a Stranger!
           </h1>
-          <div className="mt-6 text-xl space-y-7 text-zinc-600 dark:text-zinc-400">
+          <div className="mt-6 text-xl animate-slide-top [animation-fill-mode:backwards] [animation-delay:300ms] space-y-7 text-zinc-600 dark:text-zinc-400">
             <p>
               Shoot me an email if you think we&apos;re a great fit and would
               like to work with me and let&apos;s have a great time while
@@ -38,7 +38,7 @@ const Contact: FC = () => {
             </p>
             <p>yassinehaimouch@proton.me</p>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-6 animate-slide-top [animation-fill-mode:backwards] [animation-delay:800ms]">
             <Link href="https://github.com/yassinehaimouch" target="_blank">
               <GitHubLogoIcon height={25} width={25} />
             </Link>

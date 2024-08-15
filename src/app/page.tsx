@@ -24,18 +24,18 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-[2.7rem] leading-[1] dark:text-zinc-100">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-[2.7rem] leading-[1] dark:text-zinc-100 animate-slide-top">
             Hi 👋🏻 I’m Yassine <br />
             Software engineer mainly focused on Frontend Development
           </h1>
-          <div className="mt-6 text-md space-y-7 text-zinc-600 dark:text-zinc-400">
+          <div className="animate-slide-top [animation-fill-mode:backwards] [animation-delay:300ms] mt-6 text-md space-y-7 text-zinc-600 dark:text-zinc-400">
             <p>
               Welcome to my digital nook. I&apos;m a frontend developer, content
               creator, and public speaker. And here, I share what I&apos;ve been
               working on recently and things I learned along the way.
             </p>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex gap-4 mt-6 animate-slide-top [animation-fill-mode:backwards] [animation-delay:800ms]">
             <Link href="https://github.com/yassinehaimouch" target="_blank">
               <GitHubLogoIcon height={25} width={25} />
             </Link>

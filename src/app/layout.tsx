@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="antialiased">
+    <html lang="en">
       <body
         className={cn(
           "bg-slate-50 dark:bg-dark pt-[60px] md:pt-[48px]",
