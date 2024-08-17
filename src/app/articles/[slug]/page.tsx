@@ -64,7 +64,9 @@ const page: FC<ArticleProps> = ({ params }) => {
             {format(parseISO(post.date), "LLLL d, yyyy")}
           </time>
         </div>
-        <h1 className="text-5xl font-bold my-5">{post.title}</h1>
+        <h1 className="text-[1.5rem] md:text-5xl font-bold my-5">
+          {post.title}
+        </h1>
         {post.image && (
           <div className="mb-10">
             <BlurImage
