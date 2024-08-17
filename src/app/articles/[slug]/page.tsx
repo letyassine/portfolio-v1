@@ -78,7 +78,7 @@ const page: FC<ArticleProps> = ({ params }) => {
           </div>
         )}
         <article
-          className="prose prose-quoteless prose-neutral dark:prose-invert text-lg"
+          className="invert-svg prose mx-auto w-full max-w-3xl px-5 py-8 dark:prose-invert md:prose-xl prose-code:break-words prose-pre:bg-gray-900 prose-pre:leading-relaxed md:py-16 md:prose-code:break-normal"
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </MaxWidthWrapper>

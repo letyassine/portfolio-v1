@@ -14,12 +14,12 @@ const ArticleCard: FC<Post> = (post) => {
   return (
     <article className="flex flex-col justify-between px-5 py-6 md:px-8 rounded-lg border border-gray-100 dark:border-none shadow-lg dark:bg-gray-900 ">
       <div>
-        <h1 className="text-2xl md:text-3xl font-bold">{post.title}</h1>
+        <h1 className="text-balance text-2xl font-bold">{post.title}</h1>
         <time dateTime={post.date} className="mt-2 block text-gray-600">
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
         <div
-          className="line-clamp-3 mt-6 md:text-lg w-full text-gray-600 dark:text-gray-400"
+          className="line-clamp-3 w-full pt-3 text-gray-600 dark:text-gray-400"
           dangerouslySetInnerHTML={{ __html: post.body.html }}
         />
       </div>
