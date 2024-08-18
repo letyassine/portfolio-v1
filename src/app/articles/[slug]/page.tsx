@@ -58,7 +58,7 @@ const page: FC<ArticleProps> = ({ params }) => {
       <MaxWidthWrapper className="max-w-3xl mb-64 mt-8 md:mt-16">
         <div className="flex items-center justify-between">
           <Link className="hover:text-slate-400 duration-300" href="/articles">
-            ← Back to Articles
+            ← Articles
           </Link>
           <time dateTime={post.date} className="mb-1 text-gray-600">
             {format(parseISO(post.date), "LLLL d, yyyy")}
